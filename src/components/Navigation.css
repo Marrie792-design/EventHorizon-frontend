@@ -1,0 +1,132 @@
+/* Core Navigation Framework */
+.navbar.editorial-navbar {
+    background-color: #fcfbfa !important; /* Forces light canvas luxury background */
+    border-bottom: 1px solid rgba(17, 17, 17, 0.08) !important;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.3s ease;
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+}
+
+/* Brand/Logo Visibility Overrides */
+.navbar-brand.editorial-brand-logo {
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #111111 !important; /* Visible on the clean cream background */
+    font-size: 1.25rem;
+    text-decoration: none;
+}
+
+.navbar-brand.editorial-brand-logo .serif-italic {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 400;
+    text-transform: lowercase;
+}
+
+/* Nav Items & Custom Spacing Matrix */
+.editorial-navbar .editorial-nav-item {
+    color: #444444 !important; /* Charcoal black for perfect legibility */
+    font-size: 0.78rem !important;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    padding: 0.5rem 1rem !important;
+    transition: color 0.25s ease;
+}
+
+.editorial-navbar .editorial-nav-item:hover {
+    color: #111111 !important;
+}
+
+/* Premium Primary Auth Trigger Button */
+.editorial-navbar .editorial-nav-btn {
+    background-color: #111111 !important;
+    color: #ffffff !important;
+    font-size: 0.72rem !important;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    padding: 0.6rem 1.4rem !important;
+    border: 1px solid #111111 !important;
+    border-radius: 0px !important; /* Sharp signature borders */
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    display: inline-block;
+    text-align: center;
+}
+
+.editorial-navbar .editorial-nav-btn:hover {
+    background-color: transparent !important;
+    color: #111111 !important;
+}
+
+/* Dynamic Ledger Identity Tag */
+.user-ledger-identity {
+    font-size: 0.8rem;
+    font-family: monospace;
+    color: #777777;
+    letter-spacing: 0.5px;
+}
+
+/* ================= COMPACT MINIMALIST TOGGLER (TAB BAR) ================= */
+.editorial-custom-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 8px;
+}
+
+/* Makes sure the custom 3 bars are black and strictly visible */
+.editorial-custom-toggle .bar {
+    width: 22px;
+    height: 1.5px;
+    background-color: #111111 !important; 
+    display: block;
+    transition: all 0.25s ease;
+}
+
+/* Cross animation when mobile drawer opens */
+.navbar-toggler[aria-expanded="true"] .editorial-custom-toggle .bar:nth-child(1) {
+    transform: translateY(6.5px) rotate(45deg);
+}
+
+.navbar-toggler[aria-expanded="true"] .editorial-custom-toggle .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.navbar-toggler[aria-expanded="true"] .editorial-custom-toggle .bar:nth-child(3) {
+    transform: translateY(-6.5px) rotate(-45deg);
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background-color: #fcfbfa;
+        padding: 1.5rem 0;
+        border-top: 1px solid rgba(17, 17, 17, 0.05);
+        margin-top: 1rem;
+    }
+    .editorial-nav-btn {
+        margin-top: 1rem;
+        width: 100%;
+    }
+}
+
+
+
+
+.user-profile {
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.user-profile:hover {
+  color: #000 !important; /* Thoda dark ho jaye hover par */
+}
+
+.logout-accent {
+  border-bottom: 1px solid #333; /* Logout button ko subtle look dene ke liye */
+}

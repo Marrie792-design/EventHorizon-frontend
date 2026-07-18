@@ -1,0 +1,558 @@
+/* ==========================================================================
+   THE ITALIAN EDITORIAL ARCHITECTURE (HOME.CSS)
+   ========================================================================== */
+
+/* Zero-Neon Premium Italian Print Palette */
+:root {
+    --editorial-bg: #fcfbfa;       /* Off-white canvas bone background matching fine art prints */
+    --text-ink: #111111;           /* Raw charcoal deep ink black */
+    --text-muted-charcoal: #656560; /* Soft warm muted grey for fine structural text */
+    --line-border-dark: #111111;   /* Bold ink divider lines */
+    --line-hairline: rgba(17, 17, 17, 0.08); /* Minimal soft hairlines */
+    
+    /* Timeless Editorial Font Stacks */
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-serif: 'Playfair Display', 'Didot', 'Georgia', serif;
+}
+
+/* Master Body Override */
+.luxury-editorial-page {
+    background-color: var(--editorial-bg);
+    color: var(--text-ink);
+    font-family: var(--font-sans);
+    min-height: 100vh;
+    overflow-x: hidden;
+    letter-spacing: -0.2px;
+}
+
+/* NAVBAR / HEADER FIX (No Neon Elements) */
+.navbar, .header-section {
+    background-color: #0b0b0b !important; /* Premium Matte Black */
+}
+.navbar-logo, .brand-title {
+    color: #ffffff !important; 
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+.theme-toggle-btn, .nav-icon-btn {
+    border-color: var(--text-muted-charcoal) !important; 
+    color: #ffffff !important;
+}
+.theme-toggle-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* HERO ROW DESIGN CONFIGURATION */
+.magazine-hero-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 30px 40px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--editorial-bg);
+}
+
+.hero-top-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--line-hairline);
+    padding-bottom: 15px;
+}
+.hero-top-meta .meta-center {
+    font-family: var(--font-serif);
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 4px;
+}
+.hero-top-meta .meta-right {
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+.hero-top-meta .meta-right:hover { border-color: var(--text-ink); }
+
+.magazine-hero-viewport {
+    position: relative;
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0;
+}
+
+
+
+/* Ensure spans behave like blocks to allow transform/animation */
+.magazine-giant-title span {
+    display: inline-block;
+}
+/* FIXED & CENTERED: Layered Title Framework (Shifted Higher) */
+.magazine-giant-title {
+   overflow: hidden; /* Text bahar se aate waqt hide rahega */
+    display: flex;
+    justify-content: center; /* Agar center align chahiye */
+    gap: 15px;
+
+    position: absolute;
+    top: 38%;                    /* Thora upar center alignment balance karne ke liye */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Perfectly centered text frame behind image */
+    width: 100%;
+    font-size: clamp(4rem, 11.5vw, 11rem);
+    font-weight: 800;
+    letter-spacing: -5px;
+    line-height: 0.9;
+    text-transform: uppercase;
+    color: var(--text-ink);
+    text-align: center;
+    z-index: 1;                  /* Behind the centerpiece image layer */
+    pointer-events: none;
+    margin: 0;
+}
+.magazine-giant-title .serif-italic {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-style: italic;
+    text-transform: none;
+    letter-spacing: -2px;
+}
+
+/* Fine Art Cutout Frame */
+.magazine-centerpiece-wrapper {
+    position: relative;
+    width: 300px;
+    height: 430px;
+    z-index: 2;                  /* Front layer architecture */
+    box-shadow: 0 40px 90px rgba(0, 0, 0, 0.15);
+}
+.magazine-centerpiece-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Premium Action Ticket Trigger (Shifted Downwards) */
+.magazine-inline-cta {
+    position: absolute;
+    right: -45px;                
+    top: 75%;                    /* Thora neechy adjust kiya text block readability ke liye */
+    transform: translateY(-50%);
+    background-color: var(--editorial-bg);
+    border: 1px solid var(--text-ink);
+    color: var(--text-ink);
+    text-transform: uppercase;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 3;
+}
+.magazine-inline-cta:hover {
+    background-color: var(--text-ink);
+    color: var(--editorial-bg);
+    transform: translateY(-50%) scale(1.05);
+}
+
+/* Asymmetric Magazine Tri-Composition Footer */
+.hero-bottom-composition {
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr 1fr;
+    align-items: flex-end;
+    width: 100%;
+    margin-top: 50px;
+    z-index: 3;
+}
+.composition-left-text p {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--text-muted-charcoal);
+    max-width: 340px;
+    margin: 0;
+}
+.composition-center-scroll { text-align: center; }
+.scroll-text-btn {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    border-bottom: 1px solid var(--text-ink);
+    padding-bottom: 5px;
+    color: var(--text-ink);
+}
+.composition-right-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: left;
+}
+.mini-card-frame {
+    width: 230px;
+    height: 140px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+}
+.mini-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.mini-card-content { width: 230px; }
+.mini-card-desc {
+    font-size: 0.75rem;
+    line-height: 1.5;
+    color: var(--text-muted-charcoal);
+    margin: 0;
+}
+
+.editorial-statement-section {
+    position: relative;
+    background-color: #fcfbfa;
+}
+
+/* Faded ghost number/shape behind text */
+.editorial-statement-section::before {
+    content: "01";
+    position: absolute;
+    top: 50px;
+    right: 5%;
+    font-size: 15vw;
+    font-weight: 800;
+    color: rgba(17, 17, 17, 0.03); /* Extremely subtle */
+    pointer-events: none;
+    z-index: 0;
+}
+/* Drop Cap Styling for the Manifesto paragraph */
+.statement-paragraph.lead::first-letter {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    float: left;
+    margin-right: 15px;
+    line-height: 0.8;
+    color: #111111;
+    font-weight: 400;
+}
+
+.statement-large-title {
+    position: relative;
+    padding-left: 20px;
+}
+
+/* A thin line that acts as a structural anchor */
+.statement-large-title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 2px;
+    height: 60px;
+    background-color: #111111;
+}
+
+
+.statement-paragraph {
+    font-size: 1.25rem !important; /* Thoda bara */
+    line-height: 1.8 !important;   /* Breathability (Very Important) */
+    letter-spacing: -0.01em;       /* Tight tracking for elegance */
+    color: #333333;
+    max-width: 600px;              /* Text ko wide hone se rokein */
+}
+
+.statement-large-title {
+    font-size: 3rem !important;
+    line-height: 1.1 !important;
+    font-family: 'Playfair Display', serif;
+}
+
+@media (min-width: 992px) {
+    .sticky-column {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 100px; /* Navbar ke neeche stick hoga */
+    }
+}
+
+.editorial-feature-card {
+    position: relative;
+    height: 100%;
+}
+
+.editorial-img {
+    width: 100%;
+    height: 600px; /* Adjust height to match text block height */
+    object-fit: cover; /* Image ko crop karega taake shape maintain rahe */
+    filter: grayscale(20%); /* Editorial vibe ke liye light desaturation */
+    transition: transform 0.6s ease;
+}
+
+.editorial-img:hover {
+    transform: scale(1.02);
+}
+
+.editorial-caption {
+    font-size: 0.85rem;
+    font-family: var(--font-mono); /* Agar aapke paas mono font hai */
+    color: #666;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+/* ==========================================================================
+   SECTION 3: THE CURATED LINEUP (KEPT LOOKBOOK STRUCTURE)
+   ========================================================================== */
+.lineup-editorial-section {
+    background-color: var(--editorial-bg);
+}
+.border-bottom-clean {
+    border-bottom: 1px solid var(--text-ink);
+}
+.lineup-lookbook-card {
+    cursor: pointer;
+    text-align: left;
+}
+.lookbook-img-frame {
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+    background-color: #f7f7f7;
+}
+.lookbook-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), filter 0.4s ease;
+}
+.lineup-lookbook-card:hover .lookbook-img {
+    transform: scale(1.04);
+    filter: grayscale(0%);
+}
+.artist-title-name {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 0;
+}
+.artist-sub-role {
+    font-size: 0.85rem;
+    color: var(--text-muted-charcoal);
+    margin: 3px 0 0 0;
+}
+.arrow-editorial {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+.lineup-lookbook-card:hover .arrow-editorial {
+    transform: translate(3px, -3px);
+}
+
+/* ==========================================================================
+   ADDITIONAL EDITORIAL SECTIONS (CLEAN SYSTEMS)
+   ========================================================================== */
+.statement-large-title {
+    font-family: var(--font-serif);
+    font-size: 2.8rem;
+    font-weight: 400;
+    line-height: 1.2;
+}
+.venue-img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+.venue-img-short {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+.venue-title {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+}
+.editorial-cta-box {
+    border: 1px solid var(--line-hairline);
+    background-color: #f5f4f2;
+}
+.ledger-row {
+    border-bottom: 1px solid var(--line-hairline);
+    transition: background-color 0.3s ease;
+}
+.ledger-row:hover {
+    background-color: rgba(0,0,0,0.01);
+}
+.ledger-title {
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+}
+.ledger-action-arrow {
+    background: transparent;
+    border: none;
+    font-size: 1.2rem;
+}
+.bg-dark-editorial {
+    background-color: #0d0d0d;
+}
+.border-left-editorial {
+    border-left: 1px solid rgba(255,255,255,0.1);
+}
+.matrix-action-btn {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.1);
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+.matrix-action-btn:hover {
+    background: #fff;
+    color: #000;
+}
+.editorial-input-wrapper {
+    display: flex;
+    border-bottom: 2px solid var(--text-ink);
+    padding-bottom: 0.5rem;
+}
+.editorial-clean-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+.editorial-submit-arrow {
+    background: transparent;
+    border: none;
+    font-weight: 700;
+}
+
+/* RESPONSIVE LAYOUT RESPONSES */
+@media (max-width: 991px) {
+    .magazine-giant-title {
+        top: 45%;
+    }
+    .magazine-inline-cta {
+        right: 0;
+        top: 85%;
+    }
+    .hero-bottom-composition {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* MOBILE HERO OPTIMIZATION */
+@media (max-width: 991px) {
+    .magazine-hero-viewport {
+        padding: 20px 10px;
+        justify-content: flex-start; /* Image aur text ko flow mein rakhega */
+    }
+
+    .magazine-giant-title {
+        position: relative !important; /* Absolute se hataya */
+        top: 0 !important;
+        left: 0 !important;
+        transform: none !important;
+        font-size: clamp(3rem, 12vw, 5rem) !important; /* Mobile par text chota ho jayega */
+        margin-top: 10px;
+        margin-bottom: 20px;
+        text-align: center;
+        width: 100%;
+        z-index: 5;
+    }
+
+    .magazine-centerpiece-wrapper {
+        width: 90% !important; /* Screen se thora chota */
+        height: 350px !important; /* Mobile par height control ki */
+        margin: 0 auto 30px auto; /* Center kiya */
+        position: relative;
+    }
+
+    /* Agar button image ke niche chupa hua lag raha ho */
+    .magazine-inline-cta {
+        right: 10px;
+        bottom: 10px;
+        font-size: 0.6rem;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 991px) {
+    .hero-bottom-composition {
+        display: flex !important; /* Grid se Flex mein switch kiya */
+        flex-direction: column;
+        align-items: center; /* Sab kuch center mein */
+        text-align: center;
+        gap: 40px !important;
+        margin-top: 40px;
+    }
+
+    .composition-left-text p {
+        margin: 0 auto;
+        max-width: 80% !important; /* Mobile par thora aur readable */
+    }
+
+    .composition-center-scroll {
+        order: -1; /* Scroll down button ko sabse upar laane ke liye */
+    }
+
+    .composition-right-card {
+        align-items: center !important; /* Card ko center kiya */
+        width: 100%;
+    }
+
+    .mini-card-frame {
+        width: 250px; /* Mobile par image size fix */
+        height: 150px;
+    }
+    
+    .mini-card-content {
+        width: 280px !important;
+        margin-top: 15px !important;
+    }
+}
+
+
+
+
+
+@media (max-width: 767px) {
+    .editorial-ledger-table {
+        margin-top: 20px;
+    }
+
+    .ledger-row {
+        padding: 15px 0 !important; /* Less vertical space */
+        gap: 5px; /* Tighten the gaps */
+    }
+
+    .ledger-title {
+        font-size: 1.1rem; /* Slightly smaller title for mobile */
+    }
+
+    /* This allows the Status and Button to sit side-by-side */
+    .mobile-status-row {
+        display: flex !important;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-top: 10px;
+    }
+}

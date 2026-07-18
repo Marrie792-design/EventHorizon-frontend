@@ -1,0 +1,225 @@
+/* ==========================================================================
+   THE ITALIAN EDITORIAL ARCHITECTURE - CONTACT COMPONENT STYLE
+   ========================================================================== */
+
+:root {
+    --editorial-bg: #fcfbfa;
+    --text-ink: #111111;
+    --text-muted-charcoal: #555555;
+    --line-hairline: rgba(17, 17, 17, 0.1);
+    --font-serif: 'Playfair Display', 'Georgia', serif;
+    --font-sans: 'Inter', 'Helvetica Neue', sans-serif;
+}
+
+.editorial-contact-page {
+    background-color: var(--editorial-bg);
+    color: var(--text-ink);
+    font-family: var(--font-sans);
+    letter-spacing: -0.1px;
+    min-height: 100vh;
+}
+
+/* ==========================================================================
+   HEADINGS & MASTERS
+   ========================================================================== */
+.editorial-header-block {
+    padding-top: 2rem;
+}
+
+.editorial-meta-tag {
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 700;
+    color: var(--text-muted-charcoal);
+    display: block;
+    margin-bottom: 12px;
+}
+
+.editorial-giant-title {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: var(--text-ink);
+    letter-spacing: -1.5px;
+    margin: 0 auto;
+}
+
+.editorial-giant-title .serif-italic {
+    font-family: var(--font-serif);
+    font-style: italic;
+}
+
+.editorial-divider-line {
+    width: 60px;
+    height: 3px;
+    background-color: var(--text-ink);
+    margin: 25px auto 0 auto;
+}
+
+.editorial-hero-lead {
+    font-size: 1.15rem;
+    color: var(--text-muted-charcoal);
+    font-weight: 400;
+    line-height: 1.6;
+    max-width: 800px;
+}
+
+/* ==========================================================================
+   ASYMMETRIC GRID SYSTEM BLOCK UNITS
+   ========================================================================== */
+.editorial-step-row {
+    border-top: 1px solid var(--line-hairline);
+    padding: 4rem 0;
+    margin: 4rem 0 0 0 !important;
+}
+
+.editorial-step-row.last-step {
+    border-bottom: 1px solid var(--line-hairline);
+    margin-bottom: 4rem !important;
+}
+
+.step-meta-panel {
+    padding-left: 0 !important;
+    margin-bottom: 1.5rem;
+}
+
+.step-huge-number {
+    font-family: var(--font-serif);
+    font-size: 3.5rem;
+    font-weight: 400;
+    line-height: 0.8;
+    color: var(--text-ink);
+    margin-bottom: 6px;
+}
+
+.step-meta-title {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    color: var(--text-muted-charcoal);
+    margin: 0;
+}
+
+.step-fields-panel {
+    padding-right: 0 !important;
+}
+
+.editorial-section-subtitle {
+    font-family: var(--font-serif);
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    color: var(--text-ink);
+}
+
+/* ==========================================================================
+   CONCIERGE DIRECTORIES INFO BLOCKS
+   ========================================================================== */
+.contact-info-block {
+    margin-bottom: 1.5rem;
+}
+
+.info-mini-label {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    color: #888888;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.info-main-detail {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-ink);
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* ==========================================================================
+   FORM INPUT STYLINGS
+   ========================================================================== */
+.editorial-form-core .form-label {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    color: var(--text-ink);
+    margin-bottom: 10px;
+}
+
+.editorial-input-field {
+    border: 1px solid var(--line-hairline) !important;
+    border-radius: 0px !important;
+    padding: 0.95rem 1.2rem !important;
+    background-color: #ffffff !important;
+    color: var(--text-ink) !important;
+    font-size: 0.9rem !important;
+    transition: all 0.3s ease !important;
+}
+
+.editorial-input-field:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: var(--text-ink) !important;
+    background-color: #ffffff !important;
+}
+
+.editorial-input-field::placeholder {
+    color: #b5b2ad !important;
+    font-size: 0.88rem;
+    font-style: italic;
+}
+
+.text-area-custom {
+    resize: none;
+}
+
+/* ==========================================================================
+   THE ACTION BUTTON
+   ========================================================================== */
+.editorial-action-wrapper {
+    width: 100%;
+}
+
+.editorial-submit-btn {
+    background-color: var(--text-ink);
+    color: #ffffff;
+    border: 1px solid var(--text-ink);
+    padding: 1.1rem 2.5rem;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    border-radius: 0px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.editorial-submit-btn:hover {
+    background-color: transparent;
+    color: var(--text-ink);
+}
+
+.button-arrow {
+    transition: transform 0.3s ease;
+}
+
+.editorial-submit-btn:hover .button-arrow {
+    transform: translateX(6px);
+}
+
+/* ==========================================================================
+   MEDIA QUERIES
+   ========================================================================== */
+@media (max-width: 991px) {
+    .editorial-step-row {
+        padding: 2.5rem 0;
+        margin: 2.5rem 0 0 0 !important;
+    }
+}

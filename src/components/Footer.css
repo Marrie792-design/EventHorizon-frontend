@@ -1,0 +1,115 @@
+/* Core Footer Configuration */
+.editorial-footer-core {
+    background-color: #fcfbfa;
+    border-top: 1px solid rgba(17, 17, 17, 0.08);
+    font-family: 'Inter', sans-serif;
+    color: #111111;
+}
+
+/* Synchronized Typography Matrix */
+.editorial-footer-logo {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #111111;
+    font-size: 1.2rem;
+}
+
+.editorial-footer-logo .serif-italic {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 400;
+    text-transform: lowercase;
+}
+
+.editorial-footer-desc {
+    font-size: 0.82rem;
+    line-height: 1.6;
+    color: #555555;
+    letter-spacing: 0.3px;
+}
+
+.editorial-footer-heading {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    color: #111111;
+    margin-bottom: 1.25rem;
+}
+
+/* Link Actions Framework */
+.editorial-footer-links li {
+    margin-bottom: 0.6rem;
+}
+
+.editorial-footer-links a {
+    font-size: 0.8rem;
+    color: #666666;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    transition: all 0.25s ease;
+}
+
+.editorial-footer-links a:hover {
+    color: #111111;
+    padding-left: 3px; /* Subtle interaction indicator */
+}
+
+/* Newsletter Input and Submit Trigger */
+.editorial-newsletter-box {
+    border: 1px solid #111111;
+    background: #ffffff;
+    padding: 3px;
+    transition: box-shadow 0.3s ease;
+}
+
+.editorial-newsletter-box:focus-within {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.editorial-footer-input {
+    border: none;
+    background: transparent;
+    padding: 0.5rem 0.8rem;
+    font-size: 0.8rem;
+    color: #111111;
+    width: 100%;
+    outline: none;
+}
+
+.editorial-footer-input::placeholder {
+    color: #999999;
+    font-family: monospace;
+    font-size: 0.78rem;
+}
+
+.editorial-footer-btn {
+    background-color: #111111;
+    color: #ffffff;
+    border: 1px solid #111111;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    padding: 0 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.editorial-footer-btn:hover {
+    background-color: transparent;
+    color: #111111;
+}
+
+/* Structural Bottom Closure */
+.editorial-footer-bottom {
+    border-top: 1px solid rgba(17, 17, 17, 0.05);
+}
+
+.editorial-copyright-text {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+    color: #888888;
+}

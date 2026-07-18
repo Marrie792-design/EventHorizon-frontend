@@ -1,0 +1,251 @@
+/* Custom Page Wrapper Canvas */
+.event-detail-wrapper {
+    background-color: #fcfbfa;
+    color: #111111;
+    min-height: 90vh;
+    font-family: 'Inter', sans-serif;
+    border-bottom: 1px solid rgba(17, 17, 17, 0.05);
+}
+
+/* Minimalist Loader Frame */
+.editorial-loader-container {
+    background-color: #fcfbfa;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.luxury-spinner {
+    width: 2.5rem;
+    height: 2.5rem;
+    stroke-width: 1.5px;
+    color: #111111 !important;
+}
+
+/* Clean Back Trigger Button */
+.btn-back {
+    background: transparent;
+    border: none;
+    color: #666666;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 0;
+    transition: color 0.25s ease;
+}
+
+.btn-back:hover {
+    color: #111111;
+}
+
+/* Image Showcase Slider Geometry */
+.detail-img-container {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    background-color: #f4f3f0;
+    overflow: hidden;
+    border: 1px solid rgba(17, 17, 17, 0.08);
+}
+
+.slideshow-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0 !important; /* Sharp architecture edges */
+}
+
+/* Slick Micro-Arrows Framework */
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ffffff;
+    color: #111111;
+    border: 1px solid rgba(17, 17, 17, 0.1);
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    z-index: 5;
+}
+
+.slider-arrow:hover {
+    background-color: #111111;
+    color: #ffffff;
+    border-color: #111111;
+}
+
+.slider-arrow.left { left: 15px; }
+.slider-arrow.right { right: 15px; }
+
+/* Minimalist Upper Case Badge */
+.category-badge-detail {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: #111111 !important;
+    color: #ffffff !important;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 0.5rem 0.9rem;
+    border-radius: 0;
+}
+
+/* Linear Timeline Stripe Indicators */
+.slider-dots {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 6px;
+    z-index: 5;
+}
+
+.slider-dots .dot {
+    width: 20px;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.slider-dots .dot.active {
+    background-color: #ffffff;
+}
+
+/* Headline & Structural Divisions */
+.event-title-detail {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 2.6rem;
+    color: #111111;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+}
+
+.title-divider {
+    border-top: 1px solid #111111;
+    opacity: 0.15;
+    margin: 1.25rem 0;
+}
+
+.event-full-desc {
+    font-size: 0.9rem;
+    line-height: 1.75;
+    color: #444444;
+    letter-spacing: 0.2px;
+    text-align: justify;
+}
+
+/* Minimalist Booking Sideblock */
+.booking-card-detail {
+    background-color: #ffffff;
+    border: 1px solid #111111; /* Strong structural statement */
+    padding: 2.25rem;
+    position: sticky;
+    top: 40px;
+}
+
+.card-heading-detail {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 800;
+    color: #111111;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid rgba(17, 17, 17, 0.08);
+    padding-bottom: 0.75rem;
+}
+
+/* Component Row Grids */
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding-bottom: 1.25rem;
+    margin-bottom: 1.25rem;
+    border-bottom: 1px solid rgba(17, 17, 17, 0.05);
+}
+
+.info-item.border-none {
+    border-bottom: none;
+}
+
+.info-icon {
+    color: #111111;
+    font-size: 0.9rem;
+    margin-top: 3px;
+    opacity: 0.7;
+}
+
+.info-text-wrapper small {
+    display: block;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #888888;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+}
+
+.info-text-wrapper p {
+    margin: 0;
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: #222222;
+}
+
+/* Pricing Focal Indicator */
+.price-detail {
+    font-size: 1.25rem !important;
+    font-weight: 700 !important;
+    color: #111111 !important;
+    font-family: monospace;
+}
+
+/* High Contrast Execution Button */
+.btn-book-now-large {
+    background-color: #111111 !important;
+    color: #ffffff !important;
+    border: 1px solid #111111 !important;
+    font-size: 0.78rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 2px !important;
+    text-transform: uppercase !important;
+    padding: 0.9rem 0 !important;
+    border-radius: 0 !important;
+    transition: all 0.3s ease !important;
+}
+
+.btn-book-now-large:hover {
+    background-color: transparent !important;
+    color: #111111 !important;
+}
+
+/* Error Container Configurations */
+.editorial-error-container {
+    background-color: #ffffff;
+    border: 1px solid rgba(17, 17, 17, 0.1);
+    padding: 3rem;
+    max-width: 500px;
+    margin: 10vh auto;
+}
+
+.editorial-error-container h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+}
+
+.editorial-error-container p {
+    font-size: 0.85rem;
+    color: #666666;
+}

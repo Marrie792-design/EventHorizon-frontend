@@ -1,0 +1,227 @@
+/* ==========================================================================
+   THE ITALIAN EDITORIAL ARCHITECTURE - ABOUT COMPONENT STYLE
+   ========================================================================== */
+
+:root {
+    --editorial-bg: #fcfbfa;
+    --text-ink: #111111;
+    --text-muted-charcoal: #555555;
+    --line-hairline: rgba(17, 17, 17, 0.1);
+    --font-serif: 'Playfair Display', 'Georgia', serif;
+    --font-sans: 'Inter', 'Helvetica Neue', sans-serif;
+}
+
+.editorial-about-page {
+    background-color: var(--editorial-bg);
+    color: var(--text-ink);
+    font-family: var(--font-sans);
+    letter-spacing: -0.1px;
+    min-height: 100vh;
+}
+
+/* ==========================================================================
+   HERO STATEMENT & HEADINGS
+   ========================================================================== */
+.editorial-header-block {
+    padding-top: 2rem;
+}
+
+.editorial-meta-tag {
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 700;
+    color: var(--text-muted-charcoal);
+    display: block;
+    margin-bottom: 12px;
+}
+
+.editorial-giant-title {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: var(--text-ink);
+    letter-spacing: -1.5px;
+    margin: 0 auto;
+}
+
+.editorial-giant-title .serif-italic {
+    font-family: var(--font-serif);
+    font-style: italic;
+}
+
+.editorial-divider-line {
+    width: 60px;
+    height: 3px;
+    background-color: var(--text-ink);
+    margin: 25px auto 0 auto;
+}
+
+.editorial-hero-lead {
+    font-size: 1.15rem;
+    color: var(--text-muted-charcoal);
+    font-weight: 400;
+    line-height: 1.6;
+    max-width: 800px;
+}
+
+/* ==========================================================================
+   ASYMMETRIC ROW SPLITS
+   ========================================================================== */
+.editorial-step-row {
+    border-top: 1px solid var(--line-hairline);
+    padding: 4rem 0;
+    margin: 4rem 0 0 0 !important;
+}
+
+.editorial-step-row.last-step {
+    border-bottom: 1px solid var(--line-hairline);
+    margin-bottom: 4rem !important;
+}
+
+.step-meta-panel {
+    padding-left: 0 !important;
+    margin-bottom: 1.5rem;
+}
+
+.step-huge-number {
+    font-family: var(--font-serif);
+    font-size: 3.5rem;
+    font-weight: 400;
+    line-height: 0.8;
+    color: var(--text-ink);
+    margin-bottom: 6px;
+}
+
+.step-meta-title {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    color: var(--text-muted-charcoal);
+    margin: 0;
+}
+
+.step-fields-panel {
+    padding-right: 0 !important;
+}
+
+.editorial-section-subtitle {
+    font-family: var(--font-serif);
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    color: var(--text-ink);
+}
+
+.editorial-paragraph {
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: var(--text-muted-charcoal);
+    margin-bottom: 1.2rem;
+}
+
+/* ==========================================================================
+   IMAGE FRAME ATTRIBUTION
+   ========================================================================== */
+.about-editorial-image-frame {
+    width: 100%;
+    border: 1px solid var(--line-hairline);
+    padding: 12px;
+    background-color: #ffffff;
+}
+
+.about-premium-img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: filter 0.5s ease;
+}
+
+.about-editorial-image-frame:hover .about-premium-img {
+    filter: grayscale(0%);
+}
+
+.frame-attribution {
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: #888888;
+    margin-top: 10px;
+    text-align: right;
+}
+
+/* ==========================================================================
+   THE MANIFESTO METRICS
+   ========================================================================== */
+.manifesto-mini-number {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text-ink);
+    letter-spacing: 1px;
+    border-bottom: 1px solid var(--text-ink);
+    padding-bottom: 4px;
+    display: inline-block;
+}
+
+/* ==========================================================================
+   EDITORIAL STATS TILES (OVERRIDING OLD CARDS)
+   ========================================================================== */
+.editorial-stat-tile {
+    background: #ffffff;
+    border: 1px solid var(--line-hairline);
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    transition: border-color 0.3s ease;
+}
+
+.editorial-stat-tile:hover {
+    border-color: var(--text-ink);
+}
+
+.stat-giant-digits {
+    font-family: var(--font-serif);
+    font-size: 3rem;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--text-ink);
+    margin: 0 0 10px 0;
+}
+
+.stat-divider-hairline {
+    width: 30px;
+    height: 1px;
+    background-color: var(--text-ink);
+    margin: 0 auto 15px auto;
+}
+
+.stat-meta-label {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    color: var(--text-muted-charcoal);
+    display: block;
+}
+
+/* ==========================================================================
+   RESPONSIVE LAYOUT RESPONSES
+   ========================================================================== */
+@media (max-width: 991px) {
+    .editorial-step-row {
+        padding: 2.5rem 0;
+        margin: 2.5rem 0 0 0 !important;
+    }
+    .about-premium-img {
+        height: 240px;
+    }
+}
+
+@media (max-width: 768px) {
+    .editorial-stat-tile {
+        margin-bottom: 15px;
+    }
+}
