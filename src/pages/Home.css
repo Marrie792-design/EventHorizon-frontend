@@ -621,3 +621,52 @@
   object-fit: cover; /* Yeh important hai taake video crop na ho aur achi dikhe */
   border-radius: 8px; /* Agar aapne image ko round corners diye thay */
 } 
+
+
+
+
+
+
+
+/* Mobile Responsive Fixes */
+@media (max-width: 768px) {
+    
+    /* 1. Top Meta Row Fix (Smashed text ko alag aur saaf karein) */
+    .hero-top-meta {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 6px !important;
+        padding: 10px 0 !important;
+        text-align: center !important;
+        font-size: 0.85rem !important;
+    }
+
+    /* 2. Giant Title Container Fix */
+    .magazine-giant-title {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        width: 100% !important;
+        font-size: 3rem !important; /* Mobile ke liye perfect premium size */
+        margin: 2.5rem 0 1.5rem 0 !important;
+        letter-spacing: 2px !important;
+    }
+
+    /* 3. Framer Motion aur Bootstrap Layout Override */
+    .magazine-giant-title .d-inline-block {
+        display: block !important;
+        width: 100% !important;
+        text-align: center !important;
+        /* Yeh line Framer Motion ke -100px/+100px waale push ko mobile par khatam kar degi */
+        transform: translateX(0px) !important; 
+    }
+
+    /* 4. Centerpiece Image Wrapper */
+    .magazine-centerpiece-wrapper {
+        width: 85% !important;
+        margin: 1rem auto !important;
+    }
+}
