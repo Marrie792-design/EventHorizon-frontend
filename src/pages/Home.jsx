@@ -101,9 +101,14 @@ export default function Home() {
                         animate="visible"
                         variants={imageReveal}
                     >
-                        <img
+                        {/* <img
                             src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1200"
                             alt="Abstract Sound Architecture"
+                            className="magazine-centerpiece-img"
+                        /> */}
+                        <img
+                            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200"
+                            alt="Modern Architectural Horizon"
                             className="magazine-centerpiece-img"
                         />
                         <button className="magazine-inline-cta" onClick={() => navigate('/booking')}>

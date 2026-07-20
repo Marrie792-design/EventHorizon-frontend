@@ -19,7 +19,7 @@ const EventDetail = () => {
     useEffect(() => {
         const fetchEvent = async () => {
             try {
-                const response = await axios.get(`http://localhost:5000/api/events/${id}`);
+                const response = await axios.get(`https://eventhorizon-backend-production-242a.up.railway.app/api/events/${id}`);
                 setEvent(response.data);
 
                 if (response.data.gallery && response.data.gallery.length > 0) {

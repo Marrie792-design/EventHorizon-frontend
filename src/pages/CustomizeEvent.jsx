@@ -48,8 +48,8 @@ const CustomizeEvent = () => {
         const fetchEventData = async () => {
             try {
                 // Adjust endpoints matching your backend routing
-                const locationsRes = await axios.get('http://localhost:5000/api/locations');
-                const menusRes = await axios.get('http://localhost:5000/api/menus');
+                const locationsRes = await axios.get('https://eventhorizon-backend-production-242a.up.railway.app/api/locations');
+                const menusRes = await axios.get('https://eventhorizon-backend-production-242a.up.railway.app/api/menus');
                 
                 setLocations(locationsRes.data);
                 setMenuOptions(menusRes.data);
@@ -183,7 +183,7 @@ const CustomizeEvent = () => {
         const exactSubmissionData = { ...formData, calculatedBudget: absoluteTotal };
 
         try {
-            const response = await axios.post('http://localhost:5000/api/bookings/custom', exactSubmissionData);
+            const response = await axios.post('https://eventhorizon-backend-production-242a.up.railway.app/api/bookings/custom', exactSubmissionData);
             Swal.fire({
                 title: 'Proposal Generated',
                 text: response.data.message || 'Your layout and custom rates have been registered.',

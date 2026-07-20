@@ -1,7 +1,8 @@
 /* ==========================================================================
-   THE ITALIAN EDITORIAL ARCHITECTURE (HOME.CSS)
-   ========================================================================== */
 
+   THE ITALIAN EDITORIAL ARCHITECTURE (HOME.CSS)
+
+   ========================================================================== */
 /* Zero-Neon Premium Italian Print Palette */
 :root {
     --editorial-bg: #fcfbfa;       /* Off-white canvas bone background matching fine art prints */
@@ -9,12 +10,11 @@
     --text-muted-charcoal: #656560; /* Soft warm muted grey for fine structural text */
     --line-border-dark: #111111;   /* Bold ink divider lines */
     --line-hairline: rgba(17, 17, 17, 0.08); /* Minimal soft hairlines */
-    
+   
     /* Timeless Editorial Font Stacks */
     --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
     --font-serif: 'Playfair Display', 'Didot', 'Georgia', serif;
 }
-
 /* Master Body Override */
 .luxury-editorial-page {
     background-color: var(--editorial-bg);
@@ -30,12 +30,12 @@
     background-color: #0b0b0b !important; /* Premium Matte Black */
 }
 .navbar-logo, .brand-title {
-    color: #ffffff !important; 
+    color: #ffffff !important;
     font-weight: 800;
     letter-spacing: 1px;
 }
 .theme-toggle-btn, .nav-icon-btn {
-    border-color: var(--text-muted-charcoal) !important; 
+    border-color: var(--text-muted-charcoal) !important;
     color: #ffffff !important;
 }
 .theme-toggle-btn:hover {
@@ -43,6 +43,7 @@
 }
 
 /* HERO ROW DESIGN CONFIGURATION */
+
 .magazine-hero-section {
     position: relative;
     width: 100%;
@@ -90,12 +91,11 @@
     padding: 60px 0;
 }
 
-
-
 /* Ensure spans behave like blocks to allow transform/animation */
 .magazine-giant-title span {
     display: inline-block;
 }
+
 /* FIXED & CENTERED: Layered Title Framework (Shifted Higher) */
 .magazine-giant-title {
    overflow: hidden; /* Text bahar se aate waqt hide rahega */
@@ -119,6 +119,7 @@
     pointer-events: none;
     margin: 0;
 }
+
 .magazine-giant-title .serif-italic {
     font-family: var(--font-serif);
     font-weight: 400;
@@ -126,8 +127,8 @@
     text-transform: none;
     letter-spacing: -2px;
 }
-
 /* Fine Art Cutout Frame */
+
 .magazine-centerpiece-wrapper {
     position: relative;
     width: 300px;
@@ -135,12 +136,12 @@
     z-index: 2;                  /* Front layer architecture */
     box-shadow: 0 40px 90px rgba(0, 0, 0, 0.15);
 }
+
 .magazine-centerpiece-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-
 /* Premium Action Ticket Trigger (Shifted Downwards) */
 .magazine-inline-cta {
     position: absolute;
@@ -164,7 +165,6 @@
     color: var(--editorial-bg);
     transform: translateY(-50%) scale(1.05);
 }
-
 /* Asymmetric Magazine Tri-Composition Footer */
 .hero-bottom-composition {
     display: grid;
@@ -186,6 +186,7 @@
     font-size: 0.68rem;
     font-weight: 700;
     letter-spacing: 2px;
+
     border-bottom: 1px solid var(--text-ink);
     padding-bottom: 5px;
     color: var(--text-ink);
@@ -219,8 +220,8 @@
     position: relative;
     background-color: #fcfbfa;
 }
-
 /* Faded ghost number/shape behind text */
+
 .editorial-statement-section::before {
     content: "01";
     position: absolute;
@@ -232,6 +233,7 @@
     pointer-events: none;
     z-index: 0;
 }
+
 /* Drop Cap Styling for the Manifesto paragraph */
 .statement-paragraph.lead::first-letter {
     font-family: 'Playfair Display', serif;
@@ -242,7 +244,6 @@
     color: #111111;
     font-weight: 400;
 }
-
 .statement-large-title {
     position: relative;
     padding-left: 20px;
@@ -258,7 +259,6 @@
     height: 60px;
     background-color: #111111;
 }
-
 
 .statement-paragraph {
     font-size: 1.25rem !important; /* Thoda bara */
@@ -294,7 +294,6 @@
     filter: grayscale(20%); /* Editorial vibe ke liye light desaturation */
     transition: transform 0.6s ease;
 }
-
 .editorial-img:hover {
     transform: scale(1.02);
 }
@@ -307,12 +306,15 @@
     text-transform: uppercase;
 }
 /* ==========================================================================
+
    SECTION 3: THE CURATED LINEUP (KEPT LOOKBOOK STRUCTURE)
+
    ========================================================================== */
 .lineup-editorial-section {
     background-color: var(--editorial-bg);
 }
 .border-bottom-clean {
+
     border-bottom: 1px solid var(--text-ink);
 }
 .lineup-lookbook-card {
@@ -355,8 +357,11 @@
 }
 
 /* ==========================================================================
+
    ADDITIONAL EDITORIAL SECTIONS (CLEAN SYSTEMS)
+
    ========================================================================== */
+
 .statement-large-title {
     font-family: var(--font-serif);
     font-size: 2.8rem;
@@ -428,12 +433,12 @@
     border: none;
     outline: none;
 }
+
 .editorial-submit-arrow {
     background: transparent;
     border: none;
     font-weight: 700;
 }
-
 /* RESPONSIVE LAYOUT RESPONSES */
 @media (max-width: 991px) {
     .magazine-giant-title {
@@ -448,16 +453,6 @@
         gap: 20px;
     }
 }
-
-
-
-
-
-
-
-
-
-
 /* MOBILE HERO OPTIMIZATION */
 @media (max-width: 991px) {
     .magazine-hero-viewport {
@@ -478,14 +473,15 @@
         z-index: 5;
     }
 
+
     .magazine-centerpiece-wrapper {
         width: 90% !important; /* Screen se thora chota */
         height: 350px !important; /* Mobile par height control ki */
         margin: 0 auto 30px auto; /* Center kiya */
         position: relative;
     }
-
     /* Agar button image ke niche chupa hua lag raha ho */
+
     .magazine-inline-cta {
         right: 10px;
         bottom: 10px;
@@ -493,6 +489,7 @@
         padding: 8px 15px;
     }
 }
+
 
 @media (max-width: 991px) {
     .hero-bottom-composition {
@@ -503,7 +500,6 @@
         gap: 40px !important;
         margin-top: 40px;
     }
-
     .composition-left-text p {
         margin: 0 auto;
         max-width: 80% !important; /* Mobile par thora aur readable */
@@ -522,31 +518,23 @@
         width: 250px; /* Mobile par image size fix */
         height: 150px;
     }
-    
     .mini-card-content {
         width: 280px !important;
         margin-top: 15px !important;
     }
 }
 
-
-
-
-
 @media (max-width: 767px) {
     .editorial-ledger-table {
         margin-top: 20px;
     }
-
     .ledger-row {
         padding: 15px 0 !important; /* Less vertical space */
         gap: 5px; /* Tighten the gaps */
     }
-
     .ledger-title {
         font-size: 1.1rem; /* Slightly smaller title for mobile */
     }
-
     /* This allows the Status and Button to sit side-by-side */
     .mobile-status-row {
         display: flex !important;
@@ -556,3 +544,10 @@
         margin-top: 10px;
     }
 }
+
+.magazine-centerpiece-video {
+  width: 100%;       /* Ya jo width aapki image ki thi */
+  height: 100%;      /* Aspect ratio maintain karne ke liye */
+  object-fit: cover; /* Yeh important hai taake video crop na ho aur achi dikhe */
+  border-radius: 8px; /* Agar aapne image ko round corners diye thay */
+} 

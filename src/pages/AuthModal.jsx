@@ -35,7 +35,7 @@ export default function AuthModal({ show, handleClose }) {
     setSuccess('');
 
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/register', {
+      const response = await axios.post('https://eventhorizon-backend-production-242a.up.railway.app/api/auth/register', {
         username: formData.username,
         email: formData.email,
         password: formData.password
@@ -56,7 +56,7 @@ export default function AuthModal({ show, handleClose }) {
     setError('');
 
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/login', {
+      const response = await axios.post('https://eventhorizon-backend-production-242a.up.railway.app/api/auth/login', {
         email: formData.email,
         password: formData.password
       });
@@ -102,7 +102,7 @@ export default function AuthModal({ show, handleClose }) {
     setSuccess('');
 
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/forgot-password', {
+      const response = await axios.post('https://eventhorizon-backend-production-242a.up.railway.app/api/auth/forgot-password', {
         email: formData.email
       });
 

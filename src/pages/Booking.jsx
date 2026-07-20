@@ -50,7 +50,7 @@ export default function Booking() {
         };
 
         try {
-            const response = await axios.post('http://localhost:5000/api/bookings/standard', bookingPayload);
+            const response = await axios.post('https://eventhorizon-backend-production-242a.up.railway.app/api/bookings/standard', bookingPayload);
 
             Swal.fire({
                 title: 'TICKET CONFIRMED',

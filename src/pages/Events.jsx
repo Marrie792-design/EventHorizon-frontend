@@ -58,7 +58,7 @@ export default function Events() {
     useEffect(() => {
         const fetchEvents = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/api/events');
+                const response = await axios.get('https://eventhorizon-backend-production-242a.up.railway.app/api/events');
 
                 // DEBUGGING LOG: Yeh console m check karein browser me
                 console.log("=== BACKEND RESPONSE DATA ===", response.data);
