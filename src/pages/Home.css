@@ -305,6 +305,76 @@
     letter-spacing: 1px;
     text-transform: uppercase;
 }
+
+
+
+/* 1. Prevent global horizontal scrolling caused by Framer Motion */
+.luxury-editorial-page {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+}
+
+/* 2. Mobile Responsive Styles */
+@media (max-width: 768px) {
+    
+    /* Top Meta adjustments */
+    .hero-top-meta {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+        font-size: 0.8rem;
+    }
+    .meta-right {
+        text-align: center;
+    }
+
+    /* Giant Title Fix: Stack them vertically and reduce size safely */
+    .magazine-giant-title {
+        font-size: 14vw; /* Screen width ke hisab se scale hoga */
+        line-height: 1.1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    /* Target the motion spans to behave like block elements on mobile */
+    .magazine-giant-title .d-inline-block {
+        display: block !important;
+        width: 100%;
+    }
+
+    /* Centerpiece Image adjustments */
+    .magazine-centerpiece-wrapper {
+        width: 90% !important;
+        margin: 2rem auto !important;
+    }
+
+    /* Bottom Composition Fix: Vertical stacking instead of columns */
+    .hero-bottom-composition {
+        display: flex;
+        flex-direction: column !important;
+        gap: 2.5rem;
+        padding: 2rem 1rem !important;
+        text-align: center;
+    }
+
+    .composition-left-text, 
+    .composition-center-scroll, 
+    .composition-right-card {
+        width: 100% !important;
+        max-width: 100%;
+    }
+
+    /* Center the mini card image on mobile */
+    .mini-card-frame {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 250px; /* Mobile par card ka size perfect rakhne ke liye */
+    }
+}
 /* ==========================================================================
 
    SECTION 3: THE CURATED LINEUP (KEPT LOOKBOOK STRUCTURE)
