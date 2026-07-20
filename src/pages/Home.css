@@ -670,3 +670,59 @@
         margin: 1rem auto !important;
     }
 }
+
+
+
+
+
+
+
+
+/* Mobile Responsive Fixes */
+@media (max-width: 768px) {
+    
+    /* 1. Viewport overflow fix - taaki animation ke time screen shake na ho */
+    .magazine-hero-section,
+    .magazine-hero-viewport {
+        overflow-x: hidden !important;
+        width: 100% !important;
+    }
+    
+    /* 2. Top Meta Row Fix */
+    .hero-top-meta {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 6px !important;
+        padding: 10px 0 !important;
+        text-align: center !important;
+        font-size: 0.85rem !important;
+    }
+
+    /* 3. Giant Title Container Fix */
+    .magazine-giant-title {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        width: 100% !important;
+        font-size: 3.5rem !important; /* Mobile ke liye ek dum perfect clean size */
+        margin: 2.5rem 0 1.5rem 0 !important;
+        letter-spacing: 2px !important;
+    }
+
+    /* 4. Framer Motion Animation Restored */
+    .magazine-giant-title .d-inline-block {
+        display: block !important;
+        width: 100% !important;
+        text-align: center !important;
+        /* HINT: Yahan se transform lock hata diya hai taaki left/right slide wapas kaam kare */
+    }
+
+    /* 5. Centerpiece Image Wrapper */
+    .magazine-centerpiece-wrapper {
+        width: 85% !important;
+        margin: 1rem auto !important;
+    }
+}
