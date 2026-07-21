@@ -64,7 +64,7 @@ export default function Home() {
             {/* SECTION 1: THE MAGAZINE HERO */}
             <section className="magazine-hero-section">
                 <div className="hero-top-meta">
-                    <span className="meta-left">COLLECTIONSs // 2026</span>
+                    <span className="meta-left">COLLECTIONS // 2026</span>
                     <span className="meta-center">EVENT HORIZON</span>
                     <span className="meta-right" onClick={() => navigate('/events')}>ABOUT —</span>
                 </div>
